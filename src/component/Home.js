@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!hasMore) {
-        console.log('All data fetched. Stopping further loading.');
+        console.warn('All data fetched. Stopping further loading.');
         setHasMore(false);
       }
     }, 5000)
@@ -22,12 +22,9 @@ function Home() {
   }, [hasMore])
 
   const loadLaunches = () => {
-    console.log(page)
     axios.get(`https://api.spacexdata.com/v3/launches?limit=${10*page}&page=${page}`)
       .then((res) => {
-        console.log("API Response:", res.data);
         const newData = res.data;
-        console.log(newData)
         setData(newData);
         setPage(page + 1);
         if (newData.length === 0) {
