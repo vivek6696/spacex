@@ -1,0 +1,21 @@
+
+*{
+    font-family: popin;
+}
+.bg_color{
+    background-color: rgb(6, 80, 176);
+    
+}
+
+.bg_color1{
+    background-color: rgb(25, 24, 27);
+}
+
+.img_1{
+    background-color: rgb(21, 158, 222);
+}
+
+@font-face {
+    font-family: popin;
+    src: url(/src/font/Poppins/Poppins-Medium.ttf)
+}
